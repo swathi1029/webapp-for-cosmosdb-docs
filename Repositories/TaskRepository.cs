@@ -13,19 +13,33 @@ namespace SampleWebApi.Repositories
 
     public class TaskRepository : ITaskRepository
     {
-       
-        public readonly string CosmosDbConnectionString = "AccountEndpoint=https://cosmosdbfordocs.documents.azure.com:443/;AccountKey=xgNu22pE5VOs2l2dpOSHdp27EhexeERGhrrvvE8Zzx1hrjCG60w2FC3B6yHFGmmm2kurfxfP0PSPACDbqOEQZg==";
+        private string CosmosDbConnectionString;
+        private string CosmosDbKey;
+
+
+
+        //public readonly string CosmosDbConnectionString = "AccountEndpoint=https://cosmosdbfordocs.documents.azure.com:443/;AccountKey=xgNu22pE5VOs2l2dpOSHdp27EhexeERGhrrvvE8Zzx1hrjCG60w2FC3B6yHFGmmm2kurfxfP0PSPACDbqOEQZg==";
         public readonly string CosmosDbName = "TasksManagementDB";
         public readonly string CosmosDbContainerName = "Tasks";
 
         private Container GetContainerClient()
         {
             var credential = new DefaultAzureCredential();
-            var keyVaultUrl = "https://your-key-vault-name.vault.azure.net/";
+            var keyVaultUrl = "https://swathi1325908.vault.azure.net/";
             var secretClient = new SecretClient(new Uri(keyVaultUrl), credential);
 
+            var cosmosDbConnectionStringSecretName = "cosmosdbfordocs-endpoint";
+            var cosmosDbKeySecretName = "cosmosdbfordocs-key";
 
-            var cosmosDbClient = new CosmosClient(CosmosDbConnectionString);
+            var cosmosDbConnectionStringSecret =  secretClient.GetSecret(cosmosDbConnectionStringSecretName);
+            var cosmosDbKeySecret =  secretClient.GetSecret(cosmosDbKeySecretName);
+
+            CosmosDbConnectionString = cosmosDbConnectionStringSecret.Value.Value;
+            CosmosDbKey = cosmosDbKeySecret.Value.Value;
+        
+
+
+        var cosmosDbClient = new CosmosClient(CosmosDbConnectionString,CosmosDbKey);
             var container = cosmosDbClient.GetContainer(CosmosDbName, CosmosDbContainerName);
             return container;
         }
