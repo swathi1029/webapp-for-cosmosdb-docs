@@ -19,12 +19,17 @@ D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Azure.Cosmos.Core.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Azure.Cosmos.Direct.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Azure.Cosmos.Serialization.HybridRow.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Azure.DocumentDB.Core.dll
+D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Azure.KeyVault.dll
+D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Azure.KeyVault.WebKey.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Bcl.HashCode.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Rest.ClientRuntime.dll
+D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Rest.ClientRuntime.Azure.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\swathi\SampleWebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
