@@ -89,7 +89,7 @@ namespace SampleWebApi.Repositories
         public string GetVaultValue()
         {
             var client = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(GetAccessToken));
-            string vaultBaseUrl = "https://swathi1325908.vault.azure.net/";
+            string vaultBaseUrl = "https://Mykeyvault1325908.vault.azure.net/";
             string secretName = "cosmosdbfordocs-key";
             var secret = client.GetSecretAsync(vaultBaseUrl, secretName).GetAwaiter().GetResult();
             return secret.Value;
@@ -98,7 +98,7 @@ namespace SampleWebApi.Repositories
         public string GetKeySecret()
         {
             DefaultAzureCredential credential = new DefaultAzureCredential();
-            Uri keyVaultUri = new Uri("https://swathi1325908.vault.azure.net/");
+            Uri keyVaultUri = new Uri("https://Mykeyvault1325908.vault.azure.net/");
 
             var client = new SecretClient(keyVaultUri, credential);
 
